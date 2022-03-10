@@ -10,20 +10,22 @@
     <style>
         .parentDiv {
             display: flex;
+            flex-direction: row-reverse;
+            justify-content: left;
             background-color: blueviolet;
             /* justify-content: center; */
             /* align-items: center; */
-           /* margin-left: 300px; */
+            /* margin-left: 300px; */
             width: 50%;
             height: 90vh;
-            position: absolute;
+            /* position: absolute; */
 
             /* float: right; */
 
         }
 
         .headOne {
-            position: absolute;
+            /* position: absolute; */
             float: right;
             background-color: blanchedalmond;
             /* height: 8%; */
@@ -38,9 +40,23 @@
 
             /* padding-bottom: 20px; */
 
+
+        }
+
+        .headOne:hover {
+            cursor: pointer;
+            background-color: rgb(190, 114, 0);
+            color: wheat;
+            border-radius: 50%;
+            height: 50%;
+            transition: all 6s linear;
+            transform: rotateY(120deg);
+
+
+
         }
     </style>
-    <div class="parentDiv" style="">
+    <div class="parentDiv">
         <h1 class="headOne">hello</h1>
     </div>
     <br><br><br><br><br>
