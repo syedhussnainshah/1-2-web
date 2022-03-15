@@ -8,16 +8,27 @@
 <body>
 
     <style>
+        :root {
+            --backgroundColor: rgb(37, 37, 33);
+            --TextColor: rgb(221, 22, 55);
+            --marginBtn: 10px;
+        }
+
+        .btns {
+            padding: var(--marginBtn);
+        }
+
         .parentDiv {
             display: flex;
             flex-direction: row-reverse;
             justify-content: left;
-            background-color: blueviolet;
+            background-color: var(--TextColor);
             /* justify-content: center; */
             /* align-items: center; */
             /* margin-left: 300px; */
             width: 50%;
             height: 90vh;
+
             /* position: absolute; */
 
             /* float: right; */
@@ -43,9 +54,9 @@
 
         }
 
-        .headOne:hover {
+        /* .headOne:hover {
             cursor: pointer;
-            background-color: rgb(190, 114, 0);
+            background-color: var(--TextColor);
             color: wheat;
             border-radius: 50%;
             height: 50%;
@@ -54,10 +65,36 @@
 
 
 
+        } */
+        .headOne::before {
+            content: "";
+            position: absolute;
+            width: 0px;
+            height: 30px;
+            background-color: aqua;
+            transition: all 1s linear;
+        }
+        .headOne:hover:before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: aqua;
+        }
+
+        .headOne:hover:after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: aqua;
+
         }
     </style>
+    <button class="btns">Add BTN</button>
+
     <div class="parentDiv">
-        <h1 class="headOne">hello</h1>
+        <h1 class="headOne">Difference</h1>
     </div>
     <br><br><br><br><br>
     <br><br><br><br><br>
