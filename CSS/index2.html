@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .side {
+            width: 100%;
+            height: 50vh;
+        }
+    </style>
+    <div class="Slider-Container">
+        <div class="slide">
+            <img src="1.jpg" width="100%" height="100%" alt="">
+        </div>
+        <div class="slide">
+            <img src="2.jpg" width="100%" height="100%" alt="">
+        </div>
+        <div class="slide">
+            <img src="3.jpg" width="100%" height="100%" alt="">
+        </div>
+        <button onclick="Pre(-1)">Previous</button>
+        <button onclick="Pre(1)">Next</button>
+
+    </div>
+    <script>
+        let passValue = 0;
+        slider(passValue);
+
+        function Pre(a) {
+            passValue = passValue + a;
+            slider(passValue);
+
+        }
+
+        function slider(a) {
+            let slide = document.getElementsByClassName('slide');
+            if (a == slide.length) {
+                passValue = 0;
+                a = 0;
+            }
+            if (a < 0) {
+                a = slide.length - 1;
+                passValue = slide.length - 1;
+            }
+            for (let x of slide) {
+                x.style.display = "none";
+                console.log(x);
+
+            }
+            slide[a].style.display = "block";
+
+
+        }
+    </script>
+</body>
+
+</html>
