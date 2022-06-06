@@ -6,40 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
 </head>
 
 <body>
-
-
-
-
-
-
+    <button id="btn">Add me</button>
+    <h1 id="head">hello</h1>
     <script>
-        // alert("OK");
-        // let value1 = prompt("Enter Your Number 1");
-        // let value2 = prompt("Enter Your Number 2");
-        // document.write(value1 );
-        // document.write(value2 );
-        // let a = 4;
-        // var b = 3;
-        // let a = 0;
-        // document.write(a);
-        // const a = 2;
-        // const b = 6;
-        // b = 8;
-        // document.write(a+a-a*a/a);
-        let b = ['HTML','CSS','BOOTSTRAP'];
-        console.log(b);
-        let a = {
-            first: "Demo",
-            Last: 'Demo 2',
-            age: 23
-        };
-        document.write(typeof a);
-        document.write(a);
-        console.log(a);
+        let btn = document.getElementById("btn");
+        let h1 = document.getElementById("head");
+        btn.addEventListener('click', function () {
+            h1.innerText = "OK Pass";
+            console.log("Ok Pass");
+        });
+
+
+        console.log(btn);
     </script>
 </body>
 
