@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="TodoInput">
+    <button id="TodoBtn">Add Me</button>
+    <ul id="unorder">
+        <li></li>
+    </ul>
+    <script>
+        let input = document.getElementById("TodoInput");
+        let btn = document.getElementById("TodoBtn");
+        let ul = document.getElementById("unorder");
+        btn.addEventListener("click", function () {
+            let TodoInput = document.createElement("input");
+            TodoInput.setAttribute('type', 'text');
+            TodoInput.setAttribute('value', input.value);
+            TodoInput.setAttribute('readonly', 'readonly');
+            let EditBtn = document.createElement('button');
+            let delBtn = document.createElement("button");
+            let inputCheck = document.createElement('input');
+            inputCheck.setAttribute('type', 'checkbox');
+            delBtn.innerText = 'Delete';
+            EditBtn.innerText = "Edit";
+            console.log(EditBtn);
+            // console.log(TodoInput);
+            let li = document.createElement("li");
+            li.appendChild(inputCheck);
+            li.appendChild(TodoInput);
+            li.appendChild(EditBtn);
+            li.appendChild(delBtn);
+            ul.appendChild(li);
+
+        })
+    </script>
+</body>
+
+</html>
