@@ -19,6 +19,7 @@
                     <li class="bg-warning p-2">Filter1</li>
                     <li class="bg-warning p-2">Filter2</li>
                     <li class="bg-warning p-2">Filter3</li>
+                    <li class="bg-warning p-2">Filter4</li>
                 </ul>
             </div>
         </div>
@@ -33,11 +34,16 @@
         <div class="col-md-3 col-sm-3 images" data-filter="Filter3">
             <img src="images/5.jpg" width="100%" alt="">
         </div>
+        <div class="col-md-3 col-sm-3 images" data-filter="Filter4">
+            <img src="images/5.jpg" width="100%" alt="">
+        </div>
     </div>
     <script>
         let li = document.getElementsByTagName("li");
         // console.log(li);
         for (let a = 0; li.length > a; a++) {
+            // console.log(li[a]);
+
             li[a].addEventListener("click", function () {
                 for (let k = 0; li.length > k; k++) {
                     li[k].classList.remove("bg-danger");
@@ -47,12 +53,12 @@
                 let value = li[a].innerHTML;
                 console.log(value);
                 let filter = document.getElementsByClassName("images");
-                console.log(filter);
+                // console.log(filter);
                 for (let k = 0; filter.length > k; k++) {
                     filter[k].style.display = "none";
                     if (value == filter[k].getAttribute("data-filter")) {
                         filter[k].style.display = "block";
-                        console.log(filter[k]);
+                        // console.log(filter[k]);
                     }
                     if (value == "All") {
                         filter[k].style.display = "block";
